@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "About LUMUNA — Ten Years of Multilateral Diplomacy & Leadership",
     description:
       "From Sylhet's first national Model United Nations conference to LUIMUN 2026. Explore our journey, vision, and decade of diplomatic excellence.",
-    url: "https://lumuna.org/about-us",
+    url: "https://luimun-2026.vercel.app/about-us",
   },
 };
 
@@ -22,4 +22,3 @@ export default function AboutUsLayout({
 }) {
   return <>{children}</>;
 }
-

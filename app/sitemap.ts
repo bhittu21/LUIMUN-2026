@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://luimun-2026.vercel.app/";
+  const baseUrl = "https://luimun-2026.vercel.app";
   const currentDate = new Date().toISOString();
 
   return [
@@ -31,4 +31,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 }
-

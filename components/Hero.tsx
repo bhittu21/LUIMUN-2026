@@ -3,9 +3,43 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { SITE_CONFIG } from "@/constants/siteConfig";
-import { Countdown } from "./Countdown";
+
+// Dynamic import with SSR disabled prevents stale build-time numbers from being cached by Vercel Edge
+const Countdown = dynamic(
+  () => import("./Countdown").then((mod) => mod.Countdown),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="w-full max-w-md flex flex-col items-start text-left">
+        <span className="text-xs sm:text-sm md:text-base font-bold text-white tracking-wide mb-2 sm:mb-2.5 text-left drop-shadow-sm">
+          {SITE_CONFIG.dateDisplay} • Sylhet, Bangladesh
+        </span>
+        <div className="flex items-center justify-start gap-1.5 sm:gap-2">
+          {["DAYS", "HOURS", "MINUTES", "SECONDS"].map((label, index) => (
+            <React.Fragment key={label}>
+              <div className="flex flex-col items-center justify-center rounded-xl bg-black/75 backdrop-blur-md border border-white/20 px-2.5 py-2 sm:px-3.5 sm:py-2.5 md:px-4 md:py-3 min-w-[60px] sm:min-w-[74px] md:min-w-[82px] shadow-md">
+                <span className="font-display font-extrabold text-xl sm:text-2xl md:text-3xl text-white/40 tabular-nums leading-none">
+                  --
+                </span>
+                <span className="mt-1 text-[8px] sm:text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-neutral-400">
+                  {label}
+                </span>
+              </div>
+              {index < 3 && (
+                <span className="text-sm sm:text-base md:text-lg font-bold text-white/30 -mt-2 select-none">
+                  :
+                </span>
+              )}
+            </React.Fragment>
+          ))}
+        </div>
+      </div>
+    ),
+  }
+);
 
 interface HeroProps {
   onOpenUpcoming: () => void;
@@ -52,6 +86,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenUpcoming }) => {
           {/* 2. Conference Theme */}
           <div data-reveal="up" className="w-full">
             <h1 className="font-display text-xl sm:text-2xl md:text-[26px] lg:text-[28px] xl:text-[30px] font-extrabold tracking-tight text-white leading-snug md:leading-[1.3] max-w-[700px]">
+              <span className="sr-only">LUIMUN 2026: </span>
               <span className="sm:block">A WORLD IN TRANSITION: REIMAGINING GLOBAL </span>
               <span className="sm:block">COOPERATION, ADVANCING HUMAN PROGRESS, </span>
               <span className="sm:block">AND SHAPING OUR SHARED FUTURE</span>

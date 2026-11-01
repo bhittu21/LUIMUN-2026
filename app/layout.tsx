@@ -15,14 +15,16 @@ const outfit = Outfit({
   display: "swap",
 });
 
+export const revalidate = 86400; // Daily cache revalidation (24 hours)
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lumuna.org"),
+  metadataBase: new URL("https://luimun-2026.vercel.app"),
   title: {
     default: "LUIMUN 2026 | Leading University International Model United Nation",
     template: "%s | LUIMUN 2026",
   },
   description:
-    "Official website for Leading University International Model United Nation 2026 (LUIMUN). Where Diplomacy Meets Youth — Empowering young leaders through dialogue, policy, and multilateral engagement from 23–26 December 2026 in Sylhet, Bangladesh.",
+    "Official website for Leading University International Model United Nation 2026 (LUIMUN 2026). Where Diplomacy Meets Youth — Empowering young leaders through dialogue, policy, and multilateral engagement from 23–26 December 2026 in Sylhet, Bangladesh.",
   keywords: [
     "LUIMUN",
     "LUIMUN 2026",
@@ -41,7 +43,7 @@ export const metadata: Metadata = {
     "Delegate Registration",
     "Kamal Bazar Sylhet",
   ],
-  authors: [{ name: "LUMUNA", url: "https://lumuna.org" }],
+  authors: [{ name: "LUMUNA", url: "https://luimun-2026.vercel.app" }],
   creator: "LUMUNA",
   publisher: "Leading University Model United Nations Association",
   formatDetection: {
@@ -77,13 +79,13 @@ export const metadata: Metadata = {
     title: "LUIMUN 2026 — Leading University International Model United Nation",
     description:
       "Where Diplomacy Meets Youth. 23–26 December 2026 at Leading University, Kamal Bazar, Sylhet. 4 days of international diplomacy, negotiation, and debate.",
-    url: "https://lumuna.org",
+    url: "https://luimun-2026.vercel.app",
     siteName: "LUIMUN 2026",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/images/logo-nobg.png",
+        url: "https://luimun-2026.vercel.app/images/logo-nobg.png",
         width: 800,
         height: 800,
         alt: "LUIMUN 2026 Official Seal",
@@ -95,7 +97,7 @@ export const metadata: Metadata = {
     title: "LUIMUN 2026 — Leading University International Model United Nation",
     description:
       "Where Diplomacy Meets Youth. 23–26 December 2026 at Leading University, Sylhet, Bangladesh.",
-    images: ["/images/logo-nobg.png"],
+    images: ["https://luimun-2026.vercel.app/images/logo-nobg.png"],
     creator: "@LUMUNA_SYLHET",
   },
 };
@@ -105,24 +107,24 @@ const jsonLdData = {
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://lumuna.org/#website",
-      "url": "https://lumuna.org",
+      "@id": "https://luimun-2026.vercel.app/#website",
+      "url": "https://luimun-2026.vercel.app",
       "name": "LUIMUN 2026",
       "description": "Leading University International Model United Nation 2026",
       "publisher": {
-        "@id": "https://lumuna.org/#organization",
+        "@id": "https://luimun-2026.vercel.app/#organization",
       },
       "inLanguage": "en-US",
     },
     {
       "@type": "EducationalOrganization",
-      "@id": "https://lumuna.org/#organization",
+      "@id": "https://luimun-2026.vercel.app/#organization",
       "name": "Leading University Model United Nations Association",
       "alternateName": ["LUMUNA", "LUIMUN"],
-      "url": "https://lumuna.org",
+      "url": "https://luimun-2026.vercel.app",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://lumuna.org/images/logo-nobg.png",
+        "url": "https://luimun-2026.vercel.app/images/logo-nobg.png",
       },
       "sameAs": [
         "https://www.facebook.com/LUMUNA.SYLHET",
@@ -138,7 +140,7 @@ const jsonLdData = {
     },
     {
       "@type": "Event",
-      "@id": "https://lumuna.org/#event",
+      "@id": "https://luimun-2026.vercel.app/#event",
       "name": "LUIMUN 2026 — Leading University International Model United Nation",
       "description":
         "The 5th international edition of Leading University International Model United Nation (LUIMUN 2026). Four full days of diplomacy, debate, and multilateral negotiation.",
@@ -158,15 +160,15 @@ const jsonLdData = {
         },
       },
       "image": [
-        "https://lumuna.org/images/logo-nobg.png",
-        "https://lumuna.org/images/hero-lumuna-new.png",
+        "https://luimun-2026.vercel.app/images/logo-nobg.png",
+        "https://luimun-2026.vercel.app/images/hero-lumuna-new.png",
       ],
       "organizer": {
-        "@id": "https://lumuna.org/#organization",
+        "@id": "https://luimun-2026.vercel.app/#organization",
       },
       "offers": {
         "@type": "Offer",
-        "url": "https://lumuna.org",
+        "url": "https://luimun-2026.vercel.app",
         "availability": "https://schema.org/InStock",
         "validFrom": "2026-01-01T00:00:00+06:00",
       },

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Delegate Resources & Study Guides — LUIMUN 2026",
     description:
       "Prepare for debate with official Rules of Procedure, Position Paper guidelines, and substantive committee study guides for LUIMUN 2026.",
-    url: "https://lumuna.org/resources",
+    url: "https://luimun-2026.vercel.app/resources",
   },
 };
 
@@ -22,4 +22,3 @@ export default function ResourcesLayout({
 }) {
   return <>{children}</>;
 }
-

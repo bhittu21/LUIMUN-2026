@@ -48,7 +48,7 @@ export const Countdown: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTime);
 
   useEffect(() => {
-    // Run an initial calculation immediately on mount
+    // Immediately calculate time to ensure accurate user local clock sync
     setTimeLeft(calculateTime());
 
     const interval = setInterval(() => {
@@ -109,7 +109,6 @@ export const Countdown: React.FC = () => {
           </React.Fragment>
         ))}
       </div>
-
     </div>
   );
 };

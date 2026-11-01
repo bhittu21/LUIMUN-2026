@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Frequently Asked Questions — LUIMUN 2026",
     description:
       "All your questions answered: registration eligibility, delegate kits, awards, committee study guides, venue logistics, and outstation accommodation.",
-    url: "https://lumuna.org/faq",
+    url: "https://luimun-2026.vercel.app/faq",
   },
 };
 
@@ -85,4 +85,3 @@ export default function FAQLayout({
     </>
   );
 }
-

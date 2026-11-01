@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://luimun-2026.vercel.app/";
+  const baseUrl = "https://luimun-2026.vercel.app";
 
   return {
     rules: [
@@ -23,4 +23,3 @@ export default function robots(): MetadataRoute.Robots {
     host: baseUrl,
   };
 }
-
