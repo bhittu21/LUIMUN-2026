@@ -166,9 +166,16 @@ const jsonLdData = {
       "organizer": {
         "@id": "https://luimun-2026.vercel.app/#organization",
       },
+      "performer": {
+        "@type": "Organization",
+        "name": "Leading University Model United Nations Association",
+        "url": "https://luimun-2026.vercel.app",
+      },
       "offers": {
         "@type": "Offer",
         "url": "https://luimun-2026.vercel.app",
+        "price": "0",
+        "priceCurrency": "BDT",
         "availability": "https://schema.org/InStock",
         "validFrom": "2026-01-01T00:00:00+06:00",
       },
