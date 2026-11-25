@@ -125,3 +125,4 @@ Participation is open to high school, college, and university students:
 <div align="center">
 <sub>© 2026 Leading University Model United Nations Association. All rights reserved.</sub>
 </div>
+

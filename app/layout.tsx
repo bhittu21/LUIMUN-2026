@@ -15,8 +15,6 @@ const outfit = Outfit({
   display: "swap",
 });
 
-export const revalidate = 86400; // Daily cache revalidation (24 hours)
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://luimun-2026.vercel.app"),
   title: {
